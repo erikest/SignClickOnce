@@ -39,7 +39,7 @@ Built on the work of [Joe Pitt](https://www.joepitt.co.uk/Project/SignClickOnceA
 * Add PMX Certificate to Secure Files in your DevOps project
 * Add Download Secure File Task to your pipeline and configure to download certificate
 * Add Powershell Task
- * - Call SignClickOnceApp with -PMXPath $(DOWNLOADSECUREFILE.SECUREFILEPATH) and other parameters, see script documentation <TODO add example invocations>
+* Call SignClickOnceApp with -PMXPath $(DOWNLOADSECUREFILE.SECUREFILEPATH) and other parameters, see script documentation <TODO add example invocations>
  * Profit
 
 [openSSLTip]: http://maxprog.net.pl/windows/solved-visual-studio-invalid-provider-type-specified-cryptographicexception-when-trying-to-load-private-key-of-certificate/
