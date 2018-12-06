@@ -9,7 +9,7 @@ SignTool doesn't like SHA1, Mage doesn't like SHA2.  What are we to do?
 Thanks to the lovely guidance from:
 [StackOverFlow](https://stackoverflow.com/questions/39538466/how-to-authenticode-sign-clickonce-deployment-with-an-ev-sha2-cert-and-avoid-un)
 and combining that with
-[Another blerb][openSSLTip]
+[another blerb][openSSLTip]
 
 Built on the work of [Joe Pitt](https://www.joepitt.co.uk/Project/SignClickOnceApp/).
 
