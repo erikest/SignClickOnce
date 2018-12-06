@@ -1,5 +1,5 @@
 # SignClickOnce
-A powershell script which takes PFX file and code signs both the code and the manifest correctly of a ClickOnce application.
+#### This script signs your ClickOnce application with SignTool and then signs the manifest with Mage, using a provided PFX certificate or the thumbprint of one already installed into the user's certificate store.
 
 ## Overview
 To code sign the ClickOnce application and the manifest, you need to use both SignTool and Mage.
@@ -11,18 +11,17 @@ Thanks to the lovely guidance from:
 and combining that with
 [Another blerb][openSSLTip]
 
-This script builds on he work of [Joe Pitt](https://www.joepitt.co.uk/Project/SignClickOnceApp/).
+Built on the work of [Joe Pitt](https://www.joepitt.co.uk/Project/SignClickOnceApp/).
 
-signs with SignTool, then signs the manifest with Mage, using a provided PFX certificate or the thumbprint of one already installed into the user's certificate store.
 
 ### Required Tools
 * SignTool - _used to code sign the application executable and setup executables_
 * Mage - _used to sign the application manifest and click once .application file_
 * OpenSSL - _used to roundtrip PFX file before importing, based on [this][openSSLTip], to convert to a suitable 'CryptoAPI' version_
-* CertUtil - _imports the certificate into the Cert://CurrentUser/My store
+* CertUtil - _imports the certificate into the Cert://CurrentUser/My store_
 
 ### Required Permissions
-* This script requires Administrator access.
+* Administrator
 
 ### This script was designed to be integrated into an (Azure Devops) CI/CD pipeline.
 
