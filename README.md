@@ -31,4 +31,15 @@ Built on the work of [Joe Pitt](https://www.joepitt.co.uk/Project/SignClickOnceA
  
 * You can leverage Secure Files in Azure Dev Ops to supply the PMX file to the script, thus keeping it out of the repository.
 
+### Steps for Azure DevOps
+
+* Disable signing the ClickOnce manifest in your project files
+* Verify build agent is running as Administrator
+* Add SignClickOnceApp.ps1 to your repository or place in your build system at a known location.
+* Add PMX Certificate to Secure Files in your DevOps project
+* Add Download Secure File Task to your pipeline and configure to download certificate
+* Add Powershell Task
+ * - Call SignClickOnceApp with -PMXPath $(DOWNLOADSECUREFILE.SECUREFILEPATH) and other parameters, see script documentation <TODO add example invocations>
+ * Profit
+
 [openSSLTip]: http://maxprog.net.pl/windows/solved-visual-studio-invalid-provider-type-specified-cryptographicexception-when-trying-to-load-private-key-of-certificate/
